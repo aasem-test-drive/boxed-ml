@@ -23,10 +23,7 @@ from lib.lib_dataset import Dataset
 from lib.lib_plot import show_training_performance,show_dataset_chart
 
 
-# ## Definitions 
-
-# In[ ]:
-
+# Definitions 
 
 def create_model(base,num_of_classes,model_name):
     #biasInitializer = tf.keras.initializers.HeNormal(seed=101)
@@ -52,10 +49,7 @@ def print_summary(x):
         _data[k]=v
 
 
-# ## Main()
-
-# In[ ]:
-
+# Main()
 
 def main(argv):
     util=utilities()
@@ -74,10 +68,9 @@ def main(argv):
         elif opt in ("-i", "--ifile"):
             inputfile = arg
 
-    print ('Input file is "', inputfile)
-    USER_PARA=util.load_JSON_file('my_workspace/exp00_montgomeryset.json')
-    #USER_PARA=util.load_JSON_file('my_workspace/exp01_covid19_mobilenetv2.json')
-    #USER_PARA=util.load_JSON_file(inputfile)
+    print ('Input file is {'+ inputfile+'}')
+    #USER_PARA=util.load_JSON_file('my_workspace/exp00_montgomeryset.json')    
+    USER_PARA=util.load_JSON_file(inputfile)
     
     # step: Definitions
     prefix=USER_PARA['prefix']
@@ -399,15 +392,5 @@ def main(argv):
     log_json.print_jsonlog(_data)
 
 
-# In[ ]:
-
-
 if __name__ == "__main__":
     main(sys.argv[1:])
-
-
-# In[ ]:
-
-
-
-
