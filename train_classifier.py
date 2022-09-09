@@ -50,18 +50,17 @@ def main(argv):
         opts, args = getopt.getopt(argv,"hi:",["ifile=","ofile="])
         
     except getopt.GetoptError:
-        print ('train.py -i <inputfile>')
+        print ('train_classifier -i <inputfile>')
         sys.exit(2)
         
     for opt, arg in opts:
         if opt == '-h':
-            print ('train.py -i <conf_yourFilename.json>')
+            print ('train_classifier -i <conf_yourFilename.json>')
             sys.exit()
         elif opt in ("-i", "--ifile"):
             inputfile = arg
 
-    print ('Input file is {'+ inputfile+'}')
-    #USER_PARA=util.load_JSON_file('my_workspace/exp00_montgomeryset.json')    
+    #print ('Input file is {'+ inputfile+'}')  
     USER_PARA=util.load_JSON_file(inputfile)
     
     # step: Definitions
