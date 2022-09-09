@@ -2,7 +2,7 @@
 import sys, getopt, os
 from lib.lib_utils import utilities
 
-#!kill $(ps aux | grep 'tensorboard_logs' | awk '{print $2}')
+
 def main(argv):
     util=utilities()
     try:
@@ -19,10 +19,10 @@ def main(argv):
         elif opt in ("-i", "--ifile"):
             inputfile = arg
 
-    print ('Input file is {'+ inputfile+'}')    
+   
     USER_PARA=util.load_JSON_file(inputfile)
     
-    
+
     # step: Definitions
     prefix=USER_PARA['prefix']
     project_workspace=os.path.join('my_workspace',prefix)
@@ -30,11 +30,10 @@ def main(argv):
     print (path_tensorboardLog)
 
     print('\nTensorboard setup...')
-    print('\tCopy and execute:')
-    print(f'\t  tensorboard --logdir='+path_tensorboardLog+' --host 0.0.0.0 --port 6006')
-    print('\tthen open this in browser:')
-    print('\t  http://localhost:6006')
-
+    print('\tfind and kill already running tensorbord pids')
+    os.system("kill $(ps aux | grep 'tensorboard_logs' | awk '{print $2}')")
+    
+    print('\nExecuting tensorboard...')
     os.system('tensorboard --logdir='+path_tensorboardLog+' --host 0.0.0.0 --port 6006')
 
 
