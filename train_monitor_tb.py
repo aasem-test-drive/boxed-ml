@@ -22,6 +22,7 @@ def main(argv):
     print ('Input file is {'+ inputfile+'}')    
     USER_PARA=util.load_JSON_file(inputfile)
     
+    
     # step: Definitions
     prefix=USER_PARA['prefix']
     project_workspace=os.path.join('my_workspace',prefix)
@@ -34,6 +35,7 @@ def main(argv):
     print('\tthen open this in browser:')
     print('\t  http://localhost:6006')
 
+    os.system('tensorboard --logdir='+path_tensorboardLog+' --host 0.0.0.0 --port 6006')
 
 
 if __name__ == "__main__":
