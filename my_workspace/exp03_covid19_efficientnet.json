@@ -1,0 +1,13 @@
+{
+    "prefix":"exp03_COVID19_efficientnetb1",
+    "experiment_description":"covid19",
+    "architecture":  "efficientnetb1",
+    "imgHeight": 299,
+    "imgWidth": 299,
+    "colorMode": "grayscale",
+    "batch_size": 16,
+    "epochs":20,
+    "dataset_tag":"COVID-19 Radiography Database",
+    "root_dataset":"../data/xray/COVID-19_Radiography_Dataset",
+    "class_imbalance": null
+}

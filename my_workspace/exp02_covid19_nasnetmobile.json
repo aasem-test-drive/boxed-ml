@@ -1,0 +1,13 @@
+{
+    "prefix":"exp02_COVID19_nasnetmobile",
+    "experiment_description":"covid19",
+    "architecture":  "nasnetmobile",
+    "imgHeight": 224,
+    "imgWidth": 224,
+    "colorMode": "grayscale",
+    "batch_size": 32,
+    "epochs":20,
+    "dataset_tag":"COVID-19 Radiography Database",
+    "root_dataset":"../data/xray/COVID-19_Radiography_Dataset",
+    "class_imbalance": null
+}
