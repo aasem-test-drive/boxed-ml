@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Trainer v4
-
-# In[ ]:
-
-
 #!/usr/bin/python
 import sys, getopt, os
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2" # or any {'0', '1', '2','3'}
