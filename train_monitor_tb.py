@@ -30,7 +30,7 @@ def main(argv):
     print (path_tensorboardLog)
 
 
-    print ('to open 6006 port: $ sudo ufw allow 6006:6009/tcp)
+    print ('to open 6006 port: $ sudo ufw allow 6006:6009/tcp')
     
 
     print('\nTensorboard setup...')
