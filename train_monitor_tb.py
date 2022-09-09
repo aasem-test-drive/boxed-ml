@@ -29,6 +29,10 @@ def main(argv):
     path_tensorboardLog = os.path.join (project_workspace,"tensorboard_logs")
     print (path_tensorboardLog)
 
+
+    print ('to open 6006 port: $ sudo ufw allow 6006:6009/tcp)
+    
+
     print('\nTensorboard setup...')
     print('\tfind and kill already running tensorbord pids')
     os.system("kill $(ps aux | grep 'tensorboard_logs' | awk '{print $2}')")
